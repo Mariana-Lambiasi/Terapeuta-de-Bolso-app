@@ -158,32 +158,32 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-teal-50 to-cyan-100 min-h-screen flex flex-col items-center justify-center p-4 font-sans">
-      <div className="w-full max-w-2xl h-[90vh] flex flex-col bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl shadow-cyan-200/50">
-        <header className="p-4 border-b border-gray-200 flex justify-between items-center flex-shrink-0">
-          <h1 className="text-xl font-bold text-gray-700">Terapeuta de Bolso 🌱</h1>
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex flex-col items-center justify-center p-4 font-sans">
+      <div className="w-full max-w-2xl h-[90vh] flex flex-col bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl shadow-blue-200/50">
+        <header className="p-4 bg-[#6FA8DC] rounded-t-2xl flex justify-between items-center flex-shrink-0 shadow-sm">
+          <h1 className="text-xl font-bold text-white">Terapeuta de Bolso 🌱</h1>
           <nav className="flex items-center space-x-1 sm:space-x-2">
              <button
               onClick={() => setView('chat')}
-              className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'chat' ? 'bg-teal-600 text-white' : 'text-gray-600 hover:bg-teal-100'}`}
+              className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'chat' ? 'bg-white text-[#6FA8DC]' : 'text-blue-50 hover:bg-white/20 hover:text-white'}`}
             >
               Chat
             </button>
             <button
               onClick={() => setView('history')}
-              className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'history' ? 'bg-teal-600 text-white' : 'text-gray-600 hover:bg-teal-100'}`}
+              className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'history' ? 'bg-white text-[#6FA8DC]' : 'text-blue-50 hover:bg-white/20 hover:text-white'}`}
             >
               Diário
             </button>
             <button
               onClick={() => setView('exercises')}
-              className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'exercises' ? 'bg-teal-600 text-white' : 'text-gray-600 hover:bg-teal-100'}`}
+              className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'exercises' ? 'bg-white text-[#6FA8DC]' : 'text-blue-50 hover:bg-white/20 hover:text-white'}`}
             >
               Exercícios
             </button>
             <button
               onClick={handleLogout}
-              className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-100 rounded-full transition-colors"
+              className="p-2 text-blue-100 hover:text-red-100 hover:bg-red-500/20 rounded-full transition-colors"
               aria-label="Sair"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

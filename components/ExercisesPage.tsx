@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Exercise } from '../types';
 
@@ -129,7 +130,7 @@ const BreathingExerciseGuide: React.FC<{ exercise: Exercise; onBack: () => void 
   return (
     <div className="flex-1 p-4 sm:p-6 flex flex-col justify-between items-center text-center">
         <div>
-             <button onClick={onBack} className="flex items-center text-sm text-teal-600 hover:underline mb-4">
+             <button onClick={onBack} className="flex items-center text-sm text-[#6FA8DC] hover:underline mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
@@ -140,12 +141,12 @@ const BreathingExerciseGuide: React.FC<{ exercise: Exercise; onBack: () => void 
         </div>
       
         <div className="relative w-48 h-48 flex items-center justify-center">
-             <div className="absolute w-full h-full border-4 border-teal-200 rounded-full opacity-50"></div>
+             <div className="absolute w-full h-full border-4 border-[#6FA8DC]/30 rounded-full opacity-50"></div>
             <div 
-                className="absolute w-full h-full bg-teal-300 rounded-full transition-transform ease-in-out"
+                className="absolute w-full h-full bg-[#6FA8DC] rounded-full transition-transform ease-in-out"
                 style={animationStyle}
             ></div>
-            <p className="z-10 text-xl font-semibold text-teal-800">{instruction}</p>
+            <p className="z-10 text-xl font-semibold text-white">{instruction}</p>
         </div>
 
         <p className="text-xs text-gray-400">Continue respirando neste ritmo. Sinta a calma se espalhar pelo seu corpo.</p>
@@ -158,7 +159,7 @@ const MeditationExerciseGuide: React.FC<{ exercise: Exercise; onBack: () => void
   return (
     <div className="flex-1 p-4 sm:p-6 flex flex-col overflow-y-auto">
         <div className="self-start">
-            <button onClick={onBack} className="flex items-center text-sm text-teal-600 hover:underline mb-4">
+            <button onClick={onBack} className="flex items-center text-sm text-[#6FA8DC] hover:underline mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
@@ -171,7 +172,7 @@ const MeditationExerciseGuide: React.FC<{ exercise: Exercise; onBack: () => void
             <div className="text-left max-w-md mx-auto space-y-4">
                 {exercise.steps?.map((step, index) => (
                     <div key={index} className="flex items-start">
-                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white font-bold text-sm mr-3 flex-shrink-0">{index + 1}</span>
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#6FA8DC] text-white font-bold text-sm mr-3 flex-shrink-0">{index + 1}</span>
                         <p className="text-gray-600">{step}</p>
                     </div>
                 ))}
@@ -212,7 +213,7 @@ const ExercisesPage: React.FC = () => {
             <div className="flex-1">
               <div className="flex justify-between items-baseline">
                 <h3 className="font-semibold text-gray-800">{exercise.title}</h3>
-                <span className="text-xs font-medium text-teal-700 bg-teal-100 px-2 py-0.5 rounded-full">{exercise.duration}</span>
+                <span className="text-xs font-medium text-[#3b6b99] bg-blue-100 px-2 py-0.5 rounded-full">{exercise.duration}</span>
               </div>
               <p className="text-sm text-gray-600 mt-1">{exercise.description}</p>
             </div>

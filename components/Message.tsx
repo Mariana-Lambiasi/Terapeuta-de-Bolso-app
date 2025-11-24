@@ -7,7 +7,7 @@ interface MessageProps {
 }
 
 const BotIcon: React.FC = () => (
-    <div className="w-8 h-8 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+    <div className="w-8 h-8 rounded-full bg-[#6FA8DC] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
         TP
     </div>
 );
@@ -29,8 +29,8 @@ const Message: React.FC<MessageProps> = ({ message }) => {
       <div
         className={`max-w-xs md:max-w-md lg:max-w-lg px-4 py-3 rounded-2xl shadow-md ${
           isBot
-            ? 'bg-teal-100 text-gray-800 rounded-bl-none'
-            : 'bg-teal-600 text-white rounded-br-none'
+            ? 'bg-blue-50 text-gray-800 rounded-bl-none'
+            : 'bg-[#6FA8DC] text-white rounded-br-none'
         }`}
       >
         {message.isLoading ? <TypingIndicator /> : <p className="text-sm whitespace-pre-wrap">{message.text}</p>}

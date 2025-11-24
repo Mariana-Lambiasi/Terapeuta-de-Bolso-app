@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { MoodEntry } from '../types';
 import { loadMoods, saveMood } from '../services/moodService';
@@ -11,7 +12,7 @@ const moodOptions: { [key: number]: { emoji: string; label: string; color: strin
   2: { emoji: '🙁', label: 'Ansioso', color: 'bg-orange-200' },
   3: { emoji: '😐', label: 'Neutro', color: 'bg-yellow-200' },
   4: { emoji: '🙂', label: 'Calmo', color: 'bg-green-200' },
-  5: { emoji: '😊', label: 'Muito Calmo', color: 'bg-teal-200' },
+  5: { emoji: '😊', label: 'Muito Calmo', color: 'bg-blue-200' },
 };
 
 const HistoryPage: React.FC<HistoryPageProps> = ({ currentUser }) => {
@@ -45,7 +46,7 @@ const HistoryPage: React.FC<HistoryPageProps> = ({ currentUser }) => {
     <div className="flex-1 p-4 sm:p-6 flex flex-col overflow-y-auto">
       <div className={`
         mb-6 p-4 rounded-lg transition-all duration-500 ease-in-out transform 
-        ${showConfirmation ? 'bg-teal-100 shadow-lg scale-[1.02]' : 'bg-white/50 shadow-md scale-100'}
+        ${showConfirmation ? 'bg-blue-50 shadow-lg scale-[1.02]' : 'bg-white/50 shadow-md scale-100'}
       `}>
         <h2 className="text-lg font-semibold text-gray-700 mb-3 text-center">Como você está se sentindo agora?</h2>
         <div className="flex justify-around items-center">
@@ -53,7 +54,7 @@ const HistoryPage: React.FC<HistoryPageProps> = ({ currentUser }) => {
             <button
               key={level}
               onClick={() => handleLogMood(Number(level) as 1 | 2 | 3 | 4 | 5)}
-              className="flex flex-col items-center space-y-1 text-gray-600 hover:text-teal-600 transition-transform transform hover:scale-110"
+              className="flex flex-col items-center space-y-1 text-gray-600 hover:text-[#6FA8DC] transition-transform transform hover:scale-110"
               title={label}
             >
               <span className="text-3xl sm:text-4xl">{emoji}</span>
@@ -61,7 +62,7 @@ const HistoryPage: React.FC<HistoryPageProps> = ({ currentUser }) => {
           ))}
         </div>
          {showConfirmation && (
-            <p className="text-center text-sm font-medium text-teal-700 mt-3">Seu estado foi registrado. ✨</p>
+            <p className="text-center text-sm font-medium text-[#3b6b99] mt-3">Seu estado foi registrado. ✨</p>
          )}
       </div>
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 interface LoginPageProps {
@@ -44,13 +45,13 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-teal-50 to-cyan-100 min-h-screen flex flex-col items-center justify-center p-4 font-sans">
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex flex-col items-center justify-center p-4 font-sans">
       <div className="w-full max-w-sm mx-auto">
         <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-700">Terapeuta de Bolso 🌱</h1>
             <p className="text-gray-500 mt-2">Seu espaço seguro para encontrar a calma.</p>
         </div>
-        <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl shadow-cyan-200/50">
+        <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl shadow-blue-200/50">
           <h2 className="text-2xl font-bold text-center text-gray-700 mb-6">
             {isSignUp ? 'Criar Conta' : 'Entrar'}
           </h2>
@@ -65,7 +66,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 text-gray-700 bg-gray-100 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 text-gray-700 bg-gray-100 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6FA8DC]"
                 placeholder="seu@email.com"
               />
             </div>
@@ -78,13 +79,13 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2 text-gray-700 bg-gray-100 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 text-gray-700 bg-gray-100 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6FA8DC]"
                 placeholder="********"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-3 text-white bg-teal-600 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors"
+              className="w-full py-3 text-white bg-[#6FA8DC] rounded-lg hover:bg-[#5a96c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6FA8DC] transition-colors"
             >
               {isSignUp ? 'Registrar' : 'Entrar'}
             </button>
@@ -96,7 +97,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                 setIsSignUp(!isSignUp);
                 setError(null);
               }}
-              className="font-medium text-teal-600 hover:underline ml-1"
+              className="font-medium text-[#6FA8DC] hover:underline ml-1"
             >
               {isSignUp ? 'Entrar' : 'Crie uma'}
             </button>

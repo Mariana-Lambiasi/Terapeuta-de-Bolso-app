@@ -33,13 +33,13 @@ const InputBar: React.FC<InputBarProps> = ({ onSendMessage, isLoading }) => {
           onChange={(e) => setText(e.target.value)}
           placeholder="Digite sua mensagem..."
           disabled={isLoading}
-          className="flex-1 w-full px-4 py-2 text-sm text-gray-700 bg-gray-100 border border-transparent rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:opacity-50 transition-shadow"
+          className="flex-1 w-full px-4 py-2 text-sm text-gray-700 bg-gray-100 border border-transparent rounded-full focus:outline-none focus:ring-2 focus:ring-[#6FA8DC] disabled:opacity-50 transition-shadow"
           autoComplete="off"
         />
         <button
           type="submit"
           disabled={isLoading || !text.trim()}
-          className="p-2 rounded-full bg-teal-600 text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all transform hover:scale-110 active:scale-100"
+          className="p-2 rounded-full bg-[#6FA8DC] text-white hover:bg-[#5a96c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6FA8DC] disabled:bg-gray-300 disabled:cursor-not-allowed transition-all transform hover:scale-110 active:scale-100"
         >
           <SendIcon className="w-5 h-5" />
         </button>
