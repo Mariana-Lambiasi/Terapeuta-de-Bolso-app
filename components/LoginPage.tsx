@@ -85,7 +85,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
             </div>
             <button
               type="submit"
-              className="w-full py-3 text-white bg-[#6FA8DC] rounded-lg hover:bg-[#5a96c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6FA8DC] transition-colors"
+              className="w-full py-3 text-white bg-[#6FA8DC] rounded-lg hover:bg-[#5a96c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6FA8DC] transition-colors shadow-lg"
             >
               {isSignUp ? 'Registrar' : 'Entrar'}
             </button>

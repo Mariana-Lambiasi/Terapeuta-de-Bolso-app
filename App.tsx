@@ -167,19 +167,19 @@ const App: React.FC = () => {
               onClick={() => setView('chat')}
               className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'chat' ? 'bg-white text-[#6FA8DC]' : 'text-blue-50 hover:bg-white/20 hover:text-white'}`}
             >
-              Chat
+              Conversa
             </button>
             <button
               onClick={() => setView('history')}
               className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'history' ? 'bg-white text-[#6FA8DC]' : 'text-blue-50 hover:bg-white/20 hover:text-white'}`}
             >
-              Diário
+              Minhas Emoções
             </button>
             <button
               onClick={() => setView('exercises')}
               className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${view === 'exercises' ? 'bg-white text-[#6FA8DC]' : 'text-blue-50 hover:bg-white/20 hover:text-white'}`}
             >
-              Exercícios
+              Técnicas
             </button>
             <button
               onClick={handleLogout}
